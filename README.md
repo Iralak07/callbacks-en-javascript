@@ -25,12 +25,23 @@ Por lo tanto, nos dice que la funcion de devolucion de llamada puede ser pasada 
         
         miFuncion(miCallback); // Aqui lo que hacemos es pasarle nuestra funcion 'miCallback', como argumento al invocar la funcion 'miFuncion', 
         
-Nos quedaria crear la funcion 'miFuncion', en el cual especificaremos el parametro que recibira como argumento al ser invocado. Para refrescar la memoria, los parametros de las funciones son variables locales que se utiliza para almacenar los argumentos que se le pasa a la funcion al ser invocado.
+Nos quedaria crear la funcion 'miFuncion', en el cual especificaremos el parametro que recibira como argumento al ser invocado. Para refrescar la memoria, los parametros de las funciones son variables locales que se utilizan para almacenar los argumentos que se le pasa a la funcion al ser invocado.
 
     function miFuncion(callback){
+        // Aqui realizaremos alguna accion
+        
+        // Luego llamamos al callback
+        callbck(); // 
       
-    }
+    };
+
+    function miCallback(){
+      console.log('Accion completada');
+    };
+    
+    miFuncion(miCallback);
 
 Una devolución de llamada de JavaScript es una función que debe ejecutarse después de que otra función haya terminado de ejecutarse. 
+Cualquier función que se pasa como argumento a otra función para que pueda ejecutarse en esa otra función se llama como función de devolución de llamada.
 
-Cualquier función que se pasa como argumento a otra función para que pueda ejecutarse en esa otra función se llama como función de devolución de llamada. 
+
