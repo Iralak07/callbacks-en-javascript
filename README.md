@@ -41,7 +41,13 @@ Nos quedaria crear la funcion 'miFuncion', en el cual especificaremos el paramet
     
     miFuncion(miCallback);
 
-Una devolución de llamada de JavaScript es una función que debe ejecutarse después de que otra función haya terminado de ejecutarse. 
 Cualquier función que se pasa como argumento a otra función para que pueda ejecutarse en esa otra función se llama como función de devolución de llamada.
+
+# En que situacion utilizar la funcion de devolucion de llamada y cuales son sus beneficios?
+
+Las devoluciones de llamada se utilizan para manejar los resultados de las operaciones asincrónicas, lo que significa que la operación no bloquea la ejecución del resto del programa. En cambio, el programa continúa ejecutándose y la función de devolución de llamada se ejecuta cuando se completa la operación. 
+
+Antes de continuar veremos en que consisten las operaciones asincronicas y las operaciones sincronicas, 
+
 
 
