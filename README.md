@@ -45,9 +45,7 @@ Cualquier función que se pasa como argumento a otra función para que pueda eje
 
 # En que situacion utilizar la funcion de devolucion de llamada y cuales son sus beneficios?
 
-Las devoluciones de llamada se utilizan para manejar los resultados de las operaciones asincrónicas, lo que significa que la operación no bloquea la ejecución del resto del programa. En cambio, el programa continúa ejecutándose y la función de devolución de llamada se ejecuta cuando se completa la operación. 
-
-Antes de continuar veremos en que consisten las operaciones asincronicas y las operaciones sincronicas, 
+Las devoluciones de llamada se utilizan para manejar los resultados de las operaciones asincrónicas, lo que significa que la operación no bloquea la ejecución del resto del programa. En cambio, el programa continúa ejecutándose y la función de devolución de llamada se ejecuta cuando se completa la operación. Aqui es fundamental comprender en que consisten las operaciones asincronas, como asi tambien las sincronas, para ello nos detendremos un momento y centremonos por un instante en estos dos tipos de operaciones 
 
 
 
