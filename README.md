@@ -76,6 +76,45 @@ Si ejecutamos este codigo, veremos el siguiente resultado en la consola:
 Primeramente se ejecuta el primer console.log imprimiendo 'Inicio de progama', luego se invoca a la funcion 'operacionBloqueante()', el cual contiene un bucle que realiza tareas durante 5 segundos, durante esos 5 segundos no se ejecuta el codigo siguiente, a esto lo llamamos operacion bloquente, ya no no permite la realizacion de otra tarea, posterioremnte se ejecuta el el console.log imprimiendo 'Operacion bloquente completada', y finalmente se imprime 'Fin de programa', por lo tanto podemos comprobar que la ejecucion fue secuencial una tras otra.
 
 
+`#` Operaciones asincronas
+
+Una operación asíncrona no bloquea la ejecución del programa y permite que otras tareas se realicen mientras espera que la operación se complete.
+
+Veamos un ejemplo:
+
+    function f1() {
+    console.log('f1');
+    }
+
+    function f2() {
+        console.log('f2');
+    }
+
+    function main() {
+        console.log('main');
+        setTimeout(f1, 0);
+        f2();
+    }
+
+    main();
+    
+    
+En este ejemplo tenemos tres funciones f1(), f2() y main(), y la secuencia de ejecucion es la siguiente:
+
+  1 - Primeramente se invoca la funcion main()
+  2 - Dentro del mismo, en primer lugar tiene un console.log('f2'), imprimiendo 'f2'.
+  3 - Posteriormente se llama a la funcion setTimeout(), el cual contiene una funcion de devolucion de llamada.
+  4 - La funcion f1, no se ejecuta inmediatamente, por mas que le indicamos que el tiempo de ejecucion de la funcion sea en 0 segundos.
+  5 - Por lo tanto, vemos que se ejecuta la funcion f2(), el cual contiene un console.log('f2'), imprimiendo 'f2'
+  6 - Inmediatemente luego se ejecuta la funcion f1, el cual contiene un console.log('f1'), imprimiendo 'f1'
+  
+
+Es importante tener en cuenta que, aunque setTimeout con un retardo de 0 milisegundos puede parecer asincrónico, sigue siendo un truco para programar una ejecución retrasada y no garantiza un comportamiento realmente asincrónico. En situaciones reales, las operaciones asincrónicas involucran interacciones con recursos externos, como solicitudes de red o lectura/escritura de archivos, que pueden llevar tiempo y no se pueden lograr simplemente utilizando setTimeout.
+
+Ahora bien, veamos un caso real de una operacion asincronica:
+
+  
+
 
       
 
