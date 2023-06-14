@@ -1,4 +1,4 @@
-# callbacks-en-javascript
+# Callbacks-en-javascript
 En este repositorio intentare explicar lo mas simple posible que son los callbacks y en que situaciones es utilizado.
 
 # Que son los callbacks?
@@ -112,6 +112,40 @@ En este ejemplo tenemos tres funciones f1(), f2() y main(), y la secuencia de ej
 Es importante tener en cuenta que, aunque setTimeout con un retardo de 0 milisegundos puede parecer asincrónico, sigue siendo un truco para programar una ejecución retrasada y no garantiza un comportamiento realmente asincrónico. En situaciones reales, las operaciones asincrónicas involucran interacciones con recursos externos, como solicitudes de red o lectura/escritura de archivos, que pueden llevar tiempo y no se pueden lograr simplemente utilizando setTimeout.
 
 Ahora bien, veamos un caso real de una operacion asincronica:
+
+    function obtenerNombre(callback) {
+      // Realiza una solicitud a la API utilizando fetch
+     fetch(URL)
+        .then((response) => response.json()) // Convierte la respuesta en formato JSON
+        .then((response) => {
+          // Filtra las palabras de la respuesta que tienen una longitud de 5 caracteres
+          diccionario = response.filter((palabra) => palabra.length == 5);
+
+          // Obtiene una palabra aleatoria del diccionario y la convierte a mayúsculas
+          palabra = diccionario[Math.floor(Math.random() * diccionario.length)].toUpperCase();
+
+          // Llama a la función de devolución de llamada con la palabra obtenida
+          callback(palabra);
+        })
+        .catch((err) => {
+          // Maneja cualquier error que ocurra durante la solicitud
+          console.log("Ha ocurrido un error");
+        });
+    }
+
+    function imprimirPalabra(palabra) {
+      // Imprime la palabra en la consola
+      console.log(palabra);
+    }
+
+    // Llama a la función obtenerNombre pasando imprimirPalabra como callback
+    obtenerNombre(imprimirPalabra);
+
+    
+
+La función imprimirPalabra es el callback que se pasa a obtenerNombre. Recibe la palabra como argumento y en este caso, simplemente la imprime en la consola.
+
+Al llamar a obtenerNombre y pasar imprimirPalabra como callback, se ejecutará la secuencia de operaciones asincrónicas: realizar la solicitud a la API, filtrar y seleccionar una palabra, y finalmente llamar a imprimirPalabra con la palabra obtenida.
 
   
 
