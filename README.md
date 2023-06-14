@@ -3,7 +3,7 @@ En este repositorio intentare explicar lo mas simple posible que son los callbac
 
 # Que son los callbacks?
 
-Una función de devolución de llamada o callbacks es una función que se pasa a otra función como argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción. 
+Una función de devolución de llamada o callback es una función que se pasa a otra función como argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción. 
 
 Primeramente tenemos que un callbacks es una funcion, por lo tanto creemos un funcion:
   
@@ -73,7 +73,7 @@ Si ejecutamos este codigo, veremos el siguiente resultado en la consola:
       Operación bloqueante completa
       Fin del programa
 
-Primeramente se ejecuta el primer console.log imprimiendo 'Inicio de progama', luego se invoca a la funcion 'operacionBloqueante()', el cual contiene un bucle que realiza tareas durante 5 segundos, durante esos 5 segundos no se ejecuta el codigo siguiente, a esto lo llamamos operacion bloquente, ya no no permite la realizacion de otra tarea, posterioremnte se ejecuta el el console.log imprimiendo 'Operacion bloquente completada', y finalmente se imprime 'Fin de programa', por lo tanto podemos comprobar que la ejecucion fue secuencial una tras otra.
+Primeramente se ejecuta el primer console.log imprimiendo 'Inicio de progama', luego se invoca a la funcion 'operacionBloqueante()', el cual contiene un bucle que realiza tareas durante 5 segundos, durante esos 5 segundos no se ejecuta el codigo siguiente, a esto lo llamamos operacion bloqueante, ya no no permite la realizacion de otra tarea, posterioremnte se ejecuta el el console.log imprimiendo 'Operacion bloquente completada', y finalmente se imprime 'Fin de programa', por lo tanto podemos comprobar que la ejecucion fue secuencial una tras otra.
 
 
 `#` Operaciones asincronas
