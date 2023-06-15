@@ -73,7 +73,7 @@ Si ejecutamos este codigo, veremos el siguiente resultado en la consola:
       Operación bloqueante completa
       Fin del programa
 
-Primeramente se ejecuta el primer console.log imprimiendo 'Inicio de progama', luego se invoca a la funcion 'operacionBloqueante()', el cual contiene un bucle que realiza tareas durante 5 segundos, durante esos 5 segundos no se ejecuta el codigo siguiente, a esto lo llamamos operacion bloqueante, ya no no permite la realizacion de otra tarea, posterioremnte se ejecuta el el console.log imprimiendo 'Operacion bloquente completada', y finalmente se imprime 'Fin de programa', por lo tanto podemos comprobar que la ejecucion fue secuencial una tras otra.
+Primeramente se ejecuta el primer console.log imprimiendo 'Inicio de progama', luego se invoca a la funcion 'operacionBloqueante()', el cual contiene un bucle que realiza tareas durante 5 segundos, durante esos 5 segundos no se ejecuta el codigo siguiente, a esto lo llamamos operacion bloqueante, ya no permite la realizacion de otra tarea, posterioremnte se ejecuta el el console.log imprimiendo 'Operacion bloquente completada', y finalmente se imprime 'Fin de programa', por lo tanto podemos comprobar que la ejecucion fue secuencial una tras otra.
 
 
 `#` Operaciones asincronas
